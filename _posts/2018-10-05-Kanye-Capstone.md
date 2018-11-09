@@ -185,7 +185,7 @@ Topic grouping was just the beginning of the analysis and I wanted to bring in t
 
 ![Word Vectors](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/t-sne.png)
 
-After the model was compiled, I wanted to isolate particular words that appeared frequently and understand what other similar words he associated with it. I started with _'Love'_:
+After the model was compiled, I wanted to isolate particular words that appeared frequently and understand what other similar words he associated with it. I started with _Love_:
 
 ### _Most Similar to_ __Love__
 
@@ -201,9 +201,9 @@ After the model was compiled, I wanted to isolate particular words that appeared
  ('hate', 0.38067206740379333),
  ('save', 0.37218549847602844)]
  ```
-A mix of positive and negative terms here is not surprising considering how complicated love is... :heart:
+A mix of positive and negative terms here is not surprising considering how complicated love is...
 
-Next up was the word _'Myself'_ since it appeared next to love and was fairly frequent:
+Next up was the word _Myself_ since it appeared next to love and was fairly frequent:
 
 ### _Most Similar to:_ __Myself__
 
@@ -220,7 +220,7 @@ Next up was the word _'Myself'_ since it appeared next to love and was fairly fr
  ('catch', 0.44258543848991394)]
  ```
 
-Not something you would like to see associate next to the term 'myself' is anything referencing 'killing'. This type of model could potentially reveal someone commonly making references that could lead to harm coming to themselves or others.
+Not something you would like to see associate next to the term _myself_ is anything referencing _killing_. This type of model could potentially reveal someone commonly making references that could lead to harm coming to themselves or others.
 
 ## __Sequential Topic Model__
 
