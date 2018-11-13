@@ -7,9 +7,12 @@ categories: [Project, NLP]
 ---
 
 
-Kanye West is one of the most controversial public figures over the last decade and recently has been scrutinized for his views on politics and Trump. This has led many to view his actions as something to joke about or just plainly being dismissed as crazy. However, on his latest album __ye__, he openly states on the cover _“ I hate being Bi-Polar, its awesome”_ and writes about bipolar disorder being his superpower on the track _Yikes_.
+## Summary
 
-![ye](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/kanye-ye.jpg)
+
+---
+
+Kanye West is one of the most controversial public figures over the last decade and recently has been scrutinized for his views on politics and Trump. This has led many to view his actions as something to joke about or just plainly being dismissed as crazy. However, on his latest album __ye__, he openly states on the cover _“ I hate being Bi-Polar, its awesome”_ and writes about bipolar disorder being his superpower on the track _Yikes_.
 
 While behavior that is intended to hurt people is not excusable, the reality is bipolar disorder affects 6.86 million U.S. adults annually and is often overlooked since it is a misunderstood mental health condition. Commonly misdiagnosed or treatment being avoided all together due to the stigma surrounding bipolar disorder, getting the correct treatment to patients is still a hurdle preventing many from getting the help they need.
 
@@ -25,13 +28,12 @@ __Problem Statement__
 
 > __Using Machine Learning, what can we learn about how Kanye's behavior and mental state has changed over time and can this be used to build models that can help predict bipolar episodes?__
 
-Note: WORDS USED IN LYRICS WERE NOT FILTERED OR CENSORED, SOME EXPLICIT CONTENT AHEAD
 
 ## Data
 
 _Obtain the Data_
 
-In order to build out the data to look for changes over time, I collected as much data as I could that would give insight into what Kanye was thinking. This centered on the two areas where he shares his most revealing personal thoughts: his lyrics and on Twitter.
+In order to build out the data to look for changes over time, I collected as much data as I could that would give insight into what Kanye was thinking. This centered on the two areas where he shares his most revealing personal thoughts: _his lyrics and on Twitter.
 
 First, I collected Kanye's lyric data across all his songs.
 
@@ -82,7 +84,9 @@ To get around this issue, I ended up scraping the Genius lyric site for any rema
 |  Late Registration||
 |  The College Dropout||
 
-### __Text Cleaning__
+### _Text Cleaning_
+
+__Note: WORDS USED IN LYRICS WERE NOT FILTERED OR CENSORED, SOME EXPLICIT CONTENT AHEAD__
 
 To feed lyrics into the various models I used, significant time was spent on cleaning and making the data that was collected useable. To do this, several steps to properly clean the data were taken:
 
@@ -116,7 +120,7 @@ To separate words in preparation for topic modeling or classification, the clean
 
 Unfortunately, Kanye decided to delete his Twitter and Instagram account during the middle of my data collection and I could not include in my project based on the timeline I was working with.
 
-## __Models__
+## Models
 
 After the data was processed, it was ready to be used across different types of model to try and classify observations into coherent groups. With unsupervised learning, it is extremely difficult to work on grouping data into clusters that actually make sense. This involves a lot of fine tuning and exploration to try and pinpoint what is the best at summarizing into meaningful sets.
 
@@ -148,7 +152,7 @@ Each song can be labeled as most likely belong to a particular topic. Most notab
 
 Each song is given a probability of belonging to a particular topic. As an additional means of evaluating topic coherence, I reviewed how well the most probabilist song from each topic belonged there. Overall, this returned solid results.
 
-### Highest Probability Song | _Each Topic_
+#### Highest Probability Song | _Each Topic_
 
 ```
 0.9954962574881103
@@ -185,7 +189,7 @@ Topic grouping was just the beginning of the analysis and I wanted to bring in t
 
 After the model was compiled, I wanted to isolate particular words that appeared frequently and understand what other similar words he associated with it. I started with _Love_:
 
-### _Most Similar to_ __Love__
+### _Most Similar to: Love_
 
 ```
 [('fadin', 0.5092264413833618),
@@ -203,7 +207,7 @@ A mix of positive and negative terms here is not surprising considering how comp
 
 Next up was the word _Myself_ since it appeared next to love and was fairly frequent:
 
-### _Most Similar to:_ __Myself__
+### _Most Similar to: Myself_
 
 ```
 [('bed', 0.5850050449371338),
@@ -220,7 +224,7 @@ Next up was the word _Myself_ since it appeared next to love and was fairly freq
 
 Not something you would like to see associate next to the term _myself_ is anything referencing _killing_. This type of model could potentially reveal someone commonly making references that could lead to harm coming to themselves or others.
 
-## __Sequential Topic Model__
+### _Sequential Topic Model_
 
 Back to the core of our question regarding behavior changes over time, incorporating changes in topics over time a period seemed the most appropriate for detecting changes. To process the model, I grouped songs by year of release to create a chronological evaluation group. Then, I tuned parameters in order to create the proper amount of sensitivity in vocabulary changes across topics that could be detected. This was done by adjusting a parameter called _chain variance_.
 
@@ -232,9 +236,9 @@ In exploring the model outputs, I picked up on the same word 'myself' being used
 
 ![Topic 2016](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/overtime2016.png)
 
-## _Conclusion_
+## Conclusion
 
-### Machine Learning can provide powerful tools in the detection of changes
+### _Machine Learning can provide powerful tools in the detection of changes_
 
 My analysis was an exploration into what was possible at the intersection of machine learning and mental health treatment. As I continue to learn and build on the skills I learn at General Assembly, I hope to be able to contribute more on topics that can have a positive impact on people's lives. I am glad to see similar work being done in the field of data science and wanted to acknowledge the contributions currently being made by other individuals. To learn more, consider reading the article below:
 
@@ -248,15 +252,15 @@ What we can discover can help the millions of people not only living with bipola
 - Real-Time Prognosis
   - Independent evaluation that is less intrusive and provides benefit when actually needed
 
-## _Takeaways_
+## Takeaways
 
-Data:
+Using and collecting text data:
 
 > __Model quality is tied directly to the quality of preprocessing data__
 
 > __Balancing manual text cleaning with scalable operations is extremely helpful__
 
-Model:
+Building NLP models:
 
 > __Topic Modeling can assist in finding overarching groups, flexible based on need (static vs dynamic)__
 
