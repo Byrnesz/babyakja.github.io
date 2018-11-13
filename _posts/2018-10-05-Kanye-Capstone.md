@@ -9,8 +9,6 @@ categories: [Project, NLP]
 
 Kanye West is one of the most controversial public figures over the last decade and recently has been scrutinized for his views on politics and Trump. This has led many to view his actions as something to joke about or just plainly being dismissed as crazy. However, on his latest album __ye__, he openly states on the cover _“ I hate being Bi-Polar, its awesome”_ and writes about bipolar disorder being his superpower on the track _Yikes_.
 
-![ye](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/kanye-ye.jpg)
-
 While behavior that is intended to hurt people is not excusable, the reality is bipolar disorder affects 6.86 million U.S. adults annually and is often overlooked since it is a misunderstood mental health condition. Commonly misdiagnosed or treatment being avoided all together due to the stigma surrounding bipolar disorder, getting the correct treatment to patients is still a hurdle preventing many from getting the help they need.
 
 _Bipolar Disorder_
