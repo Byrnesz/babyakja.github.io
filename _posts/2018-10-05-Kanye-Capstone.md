@@ -36,7 +36,10 @@ __Takeaway__
 
 Unsupervised learning can provide useful tools in creating labels and generating additional features that may not be apparent at first. Uncovering trends and tendencies by using machine learning algorithms 
 
+
 ---
+---
+
 
 ## Background
 
