@@ -9,6 +9,24 @@ categories: [Project, NLP]
 
 ## Summary
 
+My capstone project was centered around exploring Natural Language Processing models and how to apply that in the realm of mental health. The methodology centered on taking a dataset with potential in language used and applying machine learning algorithims to identify changes. 
+
+__Data__
+
+The dataset used was Kanye West lyrics across his entire discography. I wanted to determine if there were consistent groups that can be identified and if these changed over time. Significant time was spent in collecting each song and cleaning the text of each song into a usable corpus.
+
+__Models__
+_- Topic Modeling_
+  - Latent Dirichlet Allocation (LDA)
+  - Non-negative Matrix Factorization (NMF)
+  
+Five topics were able to be generated that classified each of Kanye's song into a different type based on vocabulary. The total number of topics was selected by evaluating the coherence score.
+  
+_- Word Similarity _
+  - Word2Vec
+
+  
+- Sequential Topic Modeling
 
 ---
 
