@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Data Viz : A Journey through Time and Space!
+title: Data Viz - A Journey through Time and Space!
 featured-img: nasa
 mathjax: true
 categories: [EDA,Visualization]
 ---
+
 
 Now that the holiday season is here and I had some extra time on my hands, I wanted to try to do challenge myself with a quick and interesting visualization projects.
 
