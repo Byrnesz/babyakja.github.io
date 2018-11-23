@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Viz : A Journey through Time and Space!
+title: Data Viz - A Journey through Time and Space!
 featured-img: nasa
 mathjax: true
 categories: [EDA,Visualization]
@@ -16,7 +16,7 @@ This year, NASA will mark the 60th anniversary of its establishment as a U.S. go
 
 ## Data Cleaning
 
-I loaded the csv into a __Jupyter Notebook__, and an initial inspection of the datatypes returned the following:
+I loaded the csv into a __Jupyter Notebook__, and did an initial inspection of the datatypes returned the following:
 
 ```
 Astronaut                                object
@@ -46,9 +46,13 @@ I used the year from _Date of birth_ along with _Selection Year_ to make a new d
 
 When I think of space and charts, my first visual is the control panel of the Space Shuttle or any electronic device. This gave me the idea to use a dark background along with crisp colors that stand out on a black background.
 
-![Space Shuttle Controls](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_space_shuttle_controls.png)
+![Space Shuttle Controls](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_space_shuttle_controls.jpg)
+
+Charts and grids on control panels have simiar themes across both real and virtual environments. Above is the Space Shuttle control panel on display at Space Center Houston and below is the game play from the video game classic __Wing Commander__.
 
 ![Wing Commander](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Wing_Commander_20.gif)
+
+### Charts in Python
 
 My default charting is usually __Seaborn__ when doing quick plots with styling but I also wanted to try out the new __Chartify__ library released by Spotify to test it's functionality.
 
@@ -59,45 +63,48 @@ plt.style.use("dark_background")
 
 ## Explore Data
 
+For me, the best part of data visualization is about what you can uncover from adjusting groupings and allowing scalability to tell a story. I wanted to not only create some visually appealing graphs but see what we can learn from the data outside of the table format!
 
-
-_### Gender Selection across Space program_
+### Gender Selection across Space program
 
 ![Gender across Space Program](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_gender_year_sns.png)
 
 > Women were not selected as part of the astronaut program until 1978
+
 > The 1978 group included notable astronauts Sally Ride (first American woman in space), Shannon Lucid (held longest duration stay in space by an American), Anna Lee Fisher (first mother in space), and Judith Resnik (aboard _Challenger_ mission).
+
 > Women have never exceed or meet 50% of a selection groups total. Come on NASA!
 
-_### Age Distribution_
+### Age Distribution
 
 
-#### By Status
+#### Age By Status
 
 ![Age Distribution by Status](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_age_boxplot_sns.png)
 
-- WHO IS THE OUTLIER THAT BECAME AN ASTRONAUT AT 47?!
+From this plot, I found the outlier in the 'Former, Female' grouping of particular interest. WHO IS THE OUTLIER THAT BECAME AN ASTRONAUT AT 47?!
+
 > Barbara Morgan was the backup to Christa McAuliffe as part of the Teachers in Space Project back in 1985. McAuliffe was part of the crew for the ill-fated Space Shuttle Challenger mission in 1986.
+
 > Morgan was finally selected in 1998 and flew on the STS-118 Mission.
 
-#### By Service
-
-![Age Distribution by Service](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_service_sns.png)
-
-#### By Selection Year
+#### Age By Selection Year
 
 ![Age Distribution by Year](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_age_year_sns.png)
 
-_### Astronaut Selection_
+### Astronaut Selection
 
 {% include nasa_sankey.html %}
 
-_### Time in Space_
+### Time in Space
+
+#### Time in Space By Selection Year
 
 ![](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_year_sns.png)
 
-#### By Selection Year
+#### Time in Space By Service
 
+![Age Distribution by Service](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_service_sns.png)
 
 
 
