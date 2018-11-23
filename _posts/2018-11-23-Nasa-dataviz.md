@@ -46,9 +46,9 @@ I used the year from _Date of birth_ along with _Selection Year_ to make a new d
 
 When I think of space and charts, my first visual is the control panel of the Space Shuttle or any electronic device. This gave me the idea to use a dark background along with crisp colors that stand out on a black background.
 
-![Space Shuttle Controls](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/)
+![Space Shuttle Controls](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_space_shuttle_controls.png)
 
-![Wing Commander](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/)
+![Wing Commander](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Wing_Commander_20.gif)
 
 My default charting is usually __Seaborn__ when doing quick plots with styling but I also wanted to try out the new __Chartify__ library released by Spotify to test it's functionality.
 
@@ -57,43 +57,48 @@ plt.style.use("dark_background")
 ```
 
 
-## EDA
+## Explore Data
 
 
 
-### Gender Selection across Space program
+_### Gender Selection across Space program_
 
-![](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/)
+![Gender across Space Program](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_gender_year_sns.png)
 
 > Women were not selected as part of the astronaut program until 1978
 > The 1978 group included notable astronauts Sally Ride (first American woman in space), Shannon Lucid (held longest duration stay in space by an American), Anna Lee Fisher (first mother in space), and Judith Resnik (aboard _Challenger_ mission).
 > Women have never exceed or meet 50% of a selection groups total. Come on NASA!
 
-### Age Distribution
+_### Age Distribution_
+
 
 #### By Status
 
-![](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/)
+![Age Distribution by Status](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_age_boxplot_sns.png)
 
 - WHO IS THE OUTLIER THAT BECAME AN ASTRONAUT AT 47?!
 > Barbara Morgan was the backup to Christa McAuliffe as part of the Teachers in Space Project back in 1985. McAuliffe was part of the crew for the ill-fated Space Shuttle Challenger mission in 1986.
 > Morgan was finally selected in 1998 and flew on the STS-118 Mission.
 
+#### By Service
+
+![Age Distribution by Service](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_service_sns.png)
+
 #### By Selection Year
 
-![Age Distribution by Year](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/)
+![Age Distribution by Year](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_age_year_sns.png)
 
-### Astronaut Selection
+_### Astronaut Selection_
 
 {% include nasa_sankey.html %}
 
-### Time in Space
+_### Time in Space_
 
-![](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/
+![](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_year_sns.png)
 
 #### By Selection Year
 
-![](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/)
+
 
 
 
