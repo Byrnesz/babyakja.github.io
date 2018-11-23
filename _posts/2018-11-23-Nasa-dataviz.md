@@ -6,6 +6,7 @@ mathjax: true
 categories: [EDA,Visualization]
 ---
 
+
 Now that the holiday season is here and I had some extra time on my hands, I wanted to try to do challenge myself with a quick and interesting visualization projects.
 
 To do so, I took ion this month's DataViz Battle put on by the subreddit r/dataisbeautiful. In DataViz Battle challenges, a dataset is supplied and it is up to the individual to come up with and create interesting and informative data visualizations.
