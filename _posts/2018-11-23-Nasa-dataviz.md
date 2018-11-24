@@ -210,14 +210,14 @@ The sunburst chart only contains astronauts that spent time in space.
 {% include /custom/reddit_astro.html %}
 
 <div class="bk-root">
-    <div class="bk-plotdiv" id="82d1a1a7-f955-4d48-bffb-9a7c41a4261a"></div>
+    <div class="bk-plotdiv" id="460a5f1d-08e1-40f4-9500-9122820ad876"></div>
 </div>
 
 ---
 
 ## Conclusion
 
-I was impressed with the amount of achievements that women astronauts have accomplished over the years but personally did not know of many others than Sally Ride. I was happy to learn of such notable astronauts as Shannon Lucid and Judith Resnik and their amazing stories. 
+I was impressed with the amount of achievements that women astronauts have accomplished over the years but personally did not know of many others than Sally Ride. I was happy to learn of such notable astronauts as Shannon Lucid and Judith Resnik and their amazing stories.
 
 Thanks for checking out my post!
 Check out the Github repo [here](https://github.com/babyakja/data_viz) for code behind the charts!
