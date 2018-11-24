@@ -8,13 +8,13 @@ categories: [EDA,Visualization]
 
 This year, NASA marked the 60th anniversary of its establishment as a U.S. government agency. Let's see what we can uncover about the past 60 years through data visualization!
 
-I wanted to try to and challenge myself with a quick and exciting data visualization projects. To do so, I took on this month's DataViz Battle put on by the subreddit r/dataisbeautiful. In DataViz Battle challenges, a dataset is supplied, and it is up to the individual to come up with and create interesting and informative data visualizations.
+I wanted to try to challenge myself with a quick and exciting data visualization projects. To do so, I took on this month's DataViz Battle put on by the subreddit r/dataisbeautiful. In DataViz Battle challenges, a dataset is supplied, and it is up to the individual to come up with and create interesting and informative data visualizations.
 
 This month, the dataset contained NASA astronaut data, both current and former, along with stats about them for things such as _gender, number of flights flown, selection year into the program, time spent in space, and military or civilian background._
 
 ## Data Cleaning
 
-I loaded the CSV into a __Jupyter Notebook__, and did an initial inspection of the datatypes returned the following:
+I loaded the CSV into a __Jupyter Notebook__, and did an initial inspection of the data types, which returned the following:
 
 ```
 Astronaut                                object
