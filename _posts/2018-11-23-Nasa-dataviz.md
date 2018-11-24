@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Viz - A Journey through Time and Space!
+title: Data Viz - A Journey Through Time and Space!
 featured-img: nasa
 mathjax: true
 categories: [EDA,Visualization]
@@ -40,13 +40,13 @@ Finally, I cleaned up categorial columns I wanted to use by removing extra space
 
 I used the year from _Date of birth_ along with _Selection Year_ to make a new data column called _Age_, which refers to the age of the Astronaut at the time of their selection into the program.
 
-## Layout
+## Inspiration
 
-When I think of space and charts, my first visual is the control panel of the Space Shuttle or any electronic device. This gave me the idea to use a dark background along with crisp colors that stand out on a black background.
+When I think of space and charts, my first visual is the control panel of the Space Shuttle or any electronic device. This gave me the idea to use a dark background along with crisp colors that stand out on a black background. Below is the Space Shuttle control panel on display at Space Center Houston.
 
 ![Space Shuttle Controls](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_space_shuttle_controls.jpg)
 
-Charts and grids on control panels have similar themes across both real and virtual environments. Above is the Space Shuttle control panel on display at Space Center Houston and below is the gameplay from the video game classic __Wing Commander__.
+Charts and grids on control panels have similar themes across both real and virtual environments.  The gif below is the gameplay from the video game classic __Wing Commander__.
 
 ![Wing Commander](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Wing_Commander_20.gif)
 
@@ -54,9 +54,7 @@ Charts and grids on control panels have similar themes across both real and virt
 
 My default charting is usually __Seaborn__ when doing quick plots with styling, but I also wanted to try out the new __Chartify__ library released by Spotify to test its functionality.
 
-```Python
-plt.style.use("dark_background")
-```
+For interactive charts, I used __Plotly__ as well as __Bokeh__ since it was the library where I could most easily accomplish the sunburst effect I wanted to create.
 
 
 ## Explore Data
@@ -113,24 +111,8 @@ After creating the _Age_ feature, I wanted to see how best to include this into 
 
 From this plot, I found the outlier in the 'Former, Female' grouping of particular interest. WHO IS THE OUTLIER THAT BECAME AN ASTRONAUT AT 47?!
 
-Let's explore the data using __Pandas__ to find out!
+After exploring the data using __Pandas__, I was able to locate the astronaut I was interest in discovering!
 
-```python
-df_astro['Age'].sort_values(ascending=False).head()
-```
-
-```
-298    47
-278    45
-275    44
-294    44
-331    44
-Name: Age, dtype: int64
-```
-
-```python
-df_astro.iloc[298,:]
-```
 
 ```
 Astronaut                      Morgan, Barbara R.
@@ -150,9 +132,9 @@ Age                                             47
 Name: 298, dtype: object
 ```
 
-Since Barbara Morgan was the oldest to join the astronaut program, I was interested in her journey in getting to that point at that stage of her life. So I read into Barbara's [Wikipedia page](https://en.wikipedia.org/wiki/Barbara_Morgan) and was not disappointed in learning her journey!
+Since Barbara Morgan was the oldest to join the astronaut program, I wanted to know her journey in becoming an astronaut at an older age. So I read into Barbara's [Wikipedia page](https://en.wikipedia.org/wiki/Barbara_Morgan) and was not disappointed in learning her journey!
 
-- Barbara Morgan was the backup to Christa McAuliffe as part of the Teachers in Space Project back in 1985. McAuliffe was part of the crew for the ill-fated _Space Shuttle Challenger_ mission in 1986.
+- Barbara Morgan, a school teacher, was the backup to Christa McAuliffe as part of the Teachers in Space Project back in 1985. McAuliffe was part of the crew for the ill-fated _Space Shuttle Challenger_ mission in 1986.
 
 - Morgan was finally selected in 1998 and flew on the STS-118 Mission.
 
@@ -170,10 +152,14 @@ Additionally, I wanted to see how the age of the selection group has changed ove
 
 ### Astronaut Selection
 
+Next, let's explore what the path to becoming an astronaut looks like. To do so, I used a Sankey diagram to show this flow.
+
 {% include nasa_sankey.html %}
 
 - The current pool of astronauts is close to split between military and civilian backgrounds evenly.
 - The military path to NASA is dominated by __188 men__, but there are __13 women__ who have become astronauts from our armed services.
+
+Those 13 women service members are:
 
 ```
 [['Collins, Eileen M. ', 1990],
@@ -217,6 +203,10 @@ Interestingly, more civilians appear to have spent longer time periods in space 
 
 #### Comparison of Time in Space for all astronauts
 
+Finally, I couldn't resist but include an interactive chart to that was visually appealing and included data to explore. I chose to use a sunburst chart sorted by year and time in space to make something that can be
+
+The sunburst chart only contains astronauts that spent time in space
+
 {% include /custom/reddit_astro.html %}
 
 <div class="bk-root">
@@ -224,4 +214,24 @@ Interestingly, more civilians appear to have spent longer time periods in space 
 </div>
 
 
+
 ## Conclusion
+
+I was impressed with the amount of achievements that women astronauts have accomplished over the years but did not know of many other than Sally Ride. I was happy to learn of such notable astronauts as Shannon Lucid and Judith Resnik and their amazing stories.
+
+Thanks for checking out my post!
+Check out the Github repo [here](https://github.com/babyakja/data_viz) for code behind the charts!
+
+_Python Libraries Used_
+
+- Pandas
+
+- Numpy
+
+- Seaborn
+
+- Chartify
+
+- Plotly
+
+- Bokeh
