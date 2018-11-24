@@ -38,15 +38,15 @@ Finally, I cleaned up categorial columns I wanted to use by removing extra space
 
 ### Feature Creation
 
-I used the year from _Date of birth_ along with _Selection Year_ to make a new data column called _Age_, which refers to the age of the Astronaut at the time of their selection into the program.
+Additionally, I used the year from _Date of birth_ along with _Selection Year_ to make a new data column called _Age_, which refers to the age of the Astronaut at the time of their selection into the program.
 
 ## Inspiration
 
-When I think of space and charts, my first visual is the control panel of the Space Shuttle or any electronic device. This gave me the idea to use a dark background along with crisp colors that stand out on a black background. Below is the Space Shuttle control panel on display at Space Center Houston.
+When I think of space and graphs, my first visual is the control panel of the Space Shuttle or any older electronic device. This gave me the idea to use a dark background along with crisp colors that stand out on a black background. Below is an example of the Space Shuttle control panel on display at Space Center Houston.
 
 ![Space Shuttle Controls](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_space_shuttle_controls.jpg)
 
-Charts and grids on control panels have similar themes across both real and virtual environments.  The gif below is the gameplay from the video game classic __Wing Commander__.
+Charts and grids on control panels have similar themes across both real and virtual environments.  The gif below is the gameplay from the video game classic __Wing Commander__. This is what I hoped to mimic when I wanted to make interactive charts!
 
 ![Wing Commander](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Wing_Commander_20.gif)
 
@@ -111,7 +111,7 @@ After creating the _Age_ feature, I wanted to see how best to include this into 
 
 From this plot, I found the outlier in the 'Former, Female' grouping of particular interest. WHO IS THE OUTLIER THAT BECAME AN ASTRONAUT AT 47?!
 
-After exploring the data using __Pandas__, I was able to locate the astronaut I was interest in discovering!
+After exploring the data using __Pandas__, I was able to locate the astronaut I was interested in discovering!
 
 
 ```
@@ -140,19 +140,19 @@ Since Barbara Morgan was the oldest to join the astronaut program, I wanted to k
 
 #### Age By Selection Year
 
-Additionally, I wanted to see how the age of the selection group has changed over time, if at all.
+Additionally, I wanted to see how the age of the selection group has changed over time, if at all. A ridge plot should be a useful tool in doing so.
 
 ![Age Distribution by Year](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_age_year_sns.png)
 
-- The average age of an astronaut across all Selection Groups was __34.5__ years old
+- The __average age__ of an astronaut across all Selection Groups was __34.5__ years old
 
-- The distribution of astronauts appears to have gotten older over time with very few candidates being younger than _30_.
+- The distribution of astronauts appears to have gotten older over time with very __few candidates being younger than 30__.
 
-- We know that Selection Groups before 1978 were mostly smaller than average __16__ in each class. This can account for the distributions with less variance.
+- We know that Selection Groups before 1978 were mostly smaller than __average 16 astronauts in each class__. This can account for the distributions with less variance.
 
 ### Astronaut Selection
 
-Next, let's explore what the path to becoming an astronaut looks like. To do so, I used a Sankey diagram to show this flow.
+Next, let's explore what the path to becoming an astronaut looks like. To do so, I used a Sankey diagram to show this process.
 
 {% include nasa_sankey.html %}
 
@@ -185,16 +185,16 @@ Now for the most exciting category, how long each astronaut has spent in space. 
 
 ![Time in Space Box Plots](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_year_sns.png)
 
-As expected, the early years of the space program had astronauts with relatively shorter times spent in space, but this was marked by the Apollo Program and missions to the Moon.
+As expected, the early years of the space program had astronauts with relatively shorter times spent in space, but this was marked by the Apollo Program and missions to the Moon rather than orbits associated with the Space Station program that was later to come.
 
-I was interested in the astronaut from who appears to have been an early pioneer in length of time spent in space from the 1978 Selection Group. Here is what I found:
+I was also interested in the astronaut from who appears to have been an early pioneer in length of time spent in space from the 1978 Selection Group. Here is what I found:
 
 - Shannon Lucid was part of the first selection group that included females in 1978. One of her many achievements includes her fifth spaceflight in 1996 when she spent __188 days in space__.
 - Shannon Lucid later served as the Chief Scientist of NASA.
 
 #### Time in Space By Service
 
-I was also interested to see if military service members or civilians spent more time in space. My initial assumption is that military background would be more dominant in this area due to prior experience and also being the slight majority in astronaut background.
+I was also curious to see if military service members or civilians spent more time in space. My initial assumption is that military background would be more dominant in this area due to prior experience and also being the slight majority in astronaut background.
 
 ![Age Distribution by Service](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_service_sns.png)
 
@@ -203,9 +203,9 @@ Interestingly, more civilians appear to have spent longer time periods in space 
 
 #### Comparison of Time in Space for all astronauts
 
-Finally, I couldn't resist but include an interactive chart to that was visually appealing and included data to explore. I chose to use a sunburst chart sorted by year and time in space to make something that can be
+Finally, I couldn't resist but include an interactive chart that was visually appealing and included the data for anyone to explore. I chose to use a sunburst chart sorted by year and time in space to make something that can effectively use the space but also maintain the space theme.
 
-The sunburst chart only contains astronauts that spent time in space
+The sunburst chart only contains astronauts that spent time in space.
 
 {% include /custom/reddit_astro.html %}
 
@@ -213,11 +213,11 @@ The sunburst chart only contains astronauts that spent time in space
     <div class="bk-plotdiv" id="82d1a1a7-f955-4d48-bffb-9a7c41a4261a"></div>
 </div>
 
-
+---
 
 ## Conclusion
 
-I was impressed with the amount of achievements that women astronauts have accomplished over the years but did not know of many other than Sally Ride. I was happy to learn of such notable astronauts as Shannon Lucid and Judith Resnik and their amazing stories.
+I was impressed with the amount of achievements that women astronauts have accomplished over the years but personally did not know of many others than Sally Ride. I was happy to learn of such notable astronauts as Shannon Lucid and Judith Resnik and their amazing stories. 
 
 Thanks for checking out my post!
 Check out the Github repo [here](https://github.com/babyakja/data_viz) for code behind the charts!
@@ -225,13 +225,8 @@ Check out the Github repo [here](https://github.com/babyakja/data_viz) for code 
 _Python Libraries Used_
 
 - Pandas
-
 - Numpy
-
 - Seaborn
-
 - Chartify
-
 - Plotly
-
 - Bokeh
