@@ -64,20 +64,51 @@ plt.style.use("dark_background")
 
 ## Explore Data
 
-For me, the best part of data visualization is about what you can uncover from adjusting groupings and allowing scalability to tell a story. I wanted to not only create some visually appealing graphs but see what we can learn from the data outside of the table format!
+For me, the best part of data visualization is about what you can uncover from the data by visualizing groups and allowing scale to tell a story. I wanted to not only create some visually appealing graphs but see what we can learn from the data outside of the table format!
 
 ### Gender Selection across Space program
 
 ![Gender across Space Program](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_gender_year_sns.png)
 
-> Women were not selected as part of the astronaut program until 1978
+- Women were not selected as part of the astronaut program until 1978
 
-> The 1978 group included notable astronauts Sally Ride (first American woman in space), Shannon Lucid (held longest duration stay in space by an American), Anna Lee Fisher (first mother in space), and Judith Resnik (aboard _Challenger_ mission).
+- The 1978 group included notable astronauts Sally Ride (first American woman in space), Shannon Lucid (held longest duration stay in space by an American), Anna Lee Fisher (first mother in space), and Judith Resnik (aboard _Challenger_ mission).
 
-> Women have never exceed or meet 50% of a selection groups total. Come on NASA!
+- Women have never exceed or meet 50% of a selection groups total. Come on NASA!
+
+_Chartify side note_
+
+I really wanted the chart above to be a stacked bar chart, but that requires creating a total column in __Seaborn__ and then stacking two plots on top of each other to create this layout. Rather than battle formatting on this task, I wanted to see if __Chartify__ would be better at producing the graph I wanted.
+
+And it was successful!
+
+![Gender across Space Program](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_gender_year_ch.png)
+
+There was one additional step to make a dataframe that was the count totals I needed rather than allowing the platform to build it on it's own. Here is a snapshot of the code that made the above chart:
+
+```python
+# Create data summary to plot
+quantify_by_gender = df_astro.groupby(['Selection Year','Gender'])['Astronaut'].count().reset_index()
+
+# Plot the data
+ch = chartify.Chart(blank_labels=True,y_axis_type='categorical')
+ch.set_title("Astronaut Gender Across Space Program")
+
+ch.style.set_color_palette('categorical', palette='custom palette') # Custom palette to mimic Seaborn dark grid
+ch.plot.bar_stacked(
+         data_frame=quantify_by_gender,
+         categorical_columns=['Selection Year'],
+         numeric_column='Astronaut',
+         stack_column='Gender',
+         normalize=False,
+        categorical_order_by='labels'
+)
+```
+There was several additional lines of code needed to recreate the format to match what I wanted that graphs to look like. In the end, I decided to stick with __Seaborn__ for this project, but __Chartify__ can be useful for my future projects when I would like to stick with there built-in styles.
 
 ### Age Distribution
 
+After creating the _Age_ feature, I wanted to see how best to include this into other groupings to reveal some interesting insight into the data.
 
 #### Age By Status
 
@@ -85,17 +116,79 @@ For me, the best part of data visualization is about what you can uncover from a
 
 From this plot, I found the outlier in the 'Former, Female' grouping of particular interest. WHO IS THE OUTLIER THAT BECAME AN ASTRONAUT AT 47?!
 
-> Barbara Morgan was the backup to Christa McAuliffe as part of the Teachers in Space Project back in 1985. McAuliffe was part of the crew for the ill-fated Space Shuttle Challenger mission in 1986.
+```python
+df_astro['Age'].sort_values(ascending=False).head()
+```
 
-> Morgan was finally selected in 1998 and flew on the STS-118 Mission.
+```
+298    47
+278    45
+275    44
+294    44
+331    44
+Name: Age, dtype: int64
+```
+
+```python
+df_astro.iloc[298,:]
+```
+
+```
+Astronaut                      Morgan, Barbara R.
+Selection Year                                1998
+Group                                           17
+# Flights                                        1
+Status                                      Former
+Military or civilian                      Civilian
+Gender                                      Female
+If military include details                    NaN
+Date of birth                           11/28/1951
+Job                             Mission Specialist
+Missions flown                             STS-118
+Hr in Space                                    305
+Birht Year                                    1951
+Age                                             47
+Name: 298, dtype: object
+```
+
+- Barbara Morgan was the backup to Christa McAuliffe as part of the Teachers in Space Project back in 1985. McAuliffe was part of the crew for the ill-fated Space Shuttle Challenger mission in 1986.
+
+- Morgan was finally selected in 1998 and flew on the STS-118 Mission.
 
 #### Age By Selection Year
 
+I wanted to see how the age of the selection group has changed over time.
+
 ![Age Distribution by Year](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_age_year_sns.png)
+
+- The average age of an astronaut across all Selection Groups was 34.5 years old
+
+- The distribution of astronauts appears to have gotten older over time with very few candidates being younger than 30.
+
+- We know that Selection Groups before 1978 were mostly smaller than average 16 in each class. This can account for the distributions with less variance.
 
 ### Astronaut Selection
 
 {% include nasa_sankey.html %}
+
+- The current pool of astronauts are close to evenly split between military and civilian backgrounds.
+- The military path to NASA is dominated by 188 men, but there are 13 women who have become astronauts from our armed services.
+
+```
+[['Collins, Eileen M. ', 1990],
+['Currie, Nancy J. ', 1990],
+['Helms, Susan J. ', 1990],
+['Coleman, Catherine G. ', 1992],
+['Lawrence, Wendy B. ', 1992],
+['Hire, Kathryn P. ', 1995],
+['Kilrain, Susan L. ', 1995],
+['Melroy, Pamela A. ', 1995],
+['Cagle, Yvonne D. ', 1996],
+['Clark, Laurel B. ', 1996],
+['Nowak, Lisa M. ', 1996],
+['Stefanyshyn-Piper, Heidemarie M. ', 1996],
+['Williams, Sunita L.', 1998]]
+```
 
 ### Time in Space
 
