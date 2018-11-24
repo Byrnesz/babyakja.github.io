@@ -8,13 +8,13 @@ categories: [EDA,Visualization]
 
 This year, NASA marked the 60th anniversary of its establishment as a U.S. government agency. Let's see what we can uncover about the past 60 years through data visualization!
 
-I wanted to try to do challenge myself with a quick and interesting data visualization projects. To do so, I took on this month's DataViz Battle put on by the subreddit r/dataisbeautiful. In DataViz Battle challenges, a dataset is supplied and it is up to the individual to come up with and create interesting and informative data visualizations.
+I wanted to try to and challenge myself with a quick and exciting data visualization projects. To do so, I took on this month's DataViz Battle put on by the subreddit r/dataisbeautiful. In DataViz Battle challenges, a dataset is supplied, and it is up to the individual to come up with and create interesting and informative data visualizations.
 
 This month, the dataset contained NASA astronaut data, both current and former, along with stats about them for things such as _gender, number of flights flown, selection year into the program, time spent in space, and military or civilian background._
 
 ## Data Cleaning
 
-I loaded the csv into a __Jupyter Notebook__, and did an initial inspection of the datatypes returned the following:
+I loaded the CSV into a __Jupyter Notebook__, and did an initial inspection of the datatypes returned the following:
 
 ```
 Astronaut                                object
@@ -30,7 +30,7 @@ Job                                      object
 Missions flown                           object
 Cumulative hours of space flight time    object
 ```
-My first impressions is that there will at least have to be some clean up to the column names to make them functional by trimming extra spaces, and shorting some of the names.
+My first impressions are that there will at least have to be some clean up to the column names to make them functional by trimming extra spaces and shorting some of the names.
 
 After that, what I expected to be numeric values for _Number of Flights_ and _Hours in Space_ needed to be converted to integers from string and account for some of the null values present.
 
@@ -46,13 +46,13 @@ When I think of space and charts, my first visual is the control panel of the Sp
 
 ![Space Shuttle Controls](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_space_shuttle_controls.jpg)
 
-Charts and grids on control panels have simiar themes across both real and virtual environments. Above is the Space Shuttle control panel on display at Space Center Houston and below is the game play from the video game classic __Wing Commander__.
+Charts and grids on control panels have similar themes across both real and virtual environments. Above is the Space Shuttle control panel on display at Space Center Houston and below is the gameplay from the video game classic __Wing Commander__.
 
 ![Wing Commander](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Wing_Commander_20.gif)
 
 ### Charts in Python
 
-My default charting is usually __Seaborn__ when doing quick plots with styling but I also wanted to try out the new __Chartify__ library released by Spotify to test it's functionality.
+My default charting is usually __Seaborn__ when doing quick plots with styling, but I also wanted to try out the new __Chartify__ library released by Spotify to test its functionality.
 
 ```Python
 plt.style.use("dark_background")
@@ -61,7 +61,7 @@ plt.style.use("dark_background")
 
 ## Explore Data
 
-For me, the best part of data visualization is about what you can uncover from the data by visualizing groups and allowing scale to tell a story. I wanted to not only create some visually appealing graphs but see what we can learn from the data outside of the table format!
+For me, the best part of data visualization is about what you can uncover from the data by visualizing groups and allowing the scale to tell a story. I wanted not only to create some visually appealing graphs but see what we can learn from the data outside of the table format!
 
 ### Gender Selection across Space program
 
@@ -71,7 +71,7 @@ For me, the best part of data visualization is about what you can uncover from t
 
 - The 1978 group included notable astronauts Sally Ride (first American woman in space), Shannon Lucid (held longest duration stay in space by an American), Anna Lee Fisher (first mother in space), and Judith Resnik (aboard _Challenger_ mission).
 
-- Women have never exceed or meet 50% of a selection groups total. Come on NASA!
+- Women have never exceeded or meet 50% of a selection groups total. Come on NASA!
 
 _Chartify side note_
 
@@ -81,7 +81,7 @@ And it was successful!
 
 ![Gender across Space Program](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_gender_year_ch.png)
 
-There was one additional step to make a dataframe that was the count totals I needed rather than allowing the platform to build it on it's own. Here is a snapshot of the code that made the above chart:
+There was one additional step to make a dataframe that was the count totals I needed rather than allowing the platform to build it on its own. Here is a snapshot of the code that made the above chart:
 
 ```python
 # Create data summary to plot
@@ -101,11 +101,11 @@ ch.plot.bar_stacked(
         categorical_order_by='labels'
 )
 ```
-There was several additional lines of code needed to recreate the format to match what I wanted that graphs to look like. In the end, I decided to stick with __Seaborn__ for this project, but __Chartify__ can be useful for my future projects when I would like to stick with there built-in styles.
+There were several additional lines of code needed to recreate the format to match what I wanted that graphs to look like. In the end, I decided to stick with __Seaborn__ for this project, but __Chartify__ can be useful for my future projects when I would like to stick with there built-in styles.
 
 ### Age Distribution
 
-After creating the _Age_ feature, I wanted to see how best to include this into other groupings to reveal some interesting insight into the data.
+After creating the _Age_ feature, I wanted to see how best to include this into other groupings to reveal some fascinating insight into the data.
 
 #### Age By Status
 
@@ -113,7 +113,7 @@ After creating the _Age_ feature, I wanted to see how best to include this into 
 
 From this plot, I found the outlier in the 'Former, Female' grouping of particular interest. WHO IS THE OUTLIER THAT BECAME AN ASTRONAUT AT 47?!
 
-Lets explore the data using __Pandas__ to find out!
+Let's explore the data using __Pandas__ to find out!
 
 ```python
 df_astro['Age'].sort_values(ascending=False).head()
@@ -172,7 +172,7 @@ Additionally, I wanted to see how the age of the selection group has changed ove
 
 {% include nasa_sankey.html %}
 
-- The current pool of astronauts are close to evenly split between military and civilian backgrounds.
+- The current pool of astronauts is close to split between military and civilian backgrounds evenly.
 - The military path to NASA is dominated by __188 men__, but there are __13 women__ who have become astronauts from our armed services.
 
 ```
@@ -193,22 +193,22 @@ Additionally, I wanted to see how the age of the selection group has changed ove
 
 ### Time in Space
 
-Now for the most interesting category, how long each astronaut has spent in space. Let's see what we can find.
+Now for the most exciting category, how long each astronaut has spent in space. Let's see what we can find.
 
 #### Time in Space By Selection Year
 
 ![Time in Space Box Plots](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_year_sns.png)
 
-As expected, the early years of the space program had astronauts with relatively shorter times spent in space but this was marked by the Apollo Program and missions to the Moon.
+As expected, the early years of the space program had astronauts with relatively shorter times spent in space, but this was marked by the Apollo Program and missions to the Moon.
 
 I was interested in the astronaut from who appears to have been an early pioneer in length of time spent in space from the 1978 Selection Group. Here is what I found:
 
-- Shannon Lucid was part of the first selection group that include females in 1978. On of her many achievements includes her fifth spaceflight in 1996, when she spent __188 days in space__.
+- Shannon Lucid was part of the first selection group that included females in 1978. One of her many achievements includes her fifth spaceflight in 1996 when she spent __188 days in space__.
 - Shannon Lucid later served as the Chief Scientist of NASA.
 
 #### Time in Space By Service
 
-I was also interested to see if military service members or civilians spent more time in space. My initial assumption is that military background would be more dominate in this area due to prior experience and also being the slight majority in astronaut background.
+I was also interested to see if military service members or civilians spent more time in space. My initial assumption is that military background would be more dominant in this area due to prior experience and also being the slight majority in astronaut background.
 
 ![Age Distribution by Service](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_service_sns.png)
 
