@@ -6,14 +6,11 @@ mathjax: true
 categories: [EDA,Visualization]
 ---
 
+This year, NASA marked the 60th anniversary of its establishment as a U.S. government agency. Let's see what we can uncover about the past 60 years through data visualization!
 
-Now that the holiday season is here and I had some extra time on my hands, I wanted to try to do challenge myself with a quick and interesting visualization projects.
+I wanted to try to do challenge myself with a quick and interesting data visualization projects. To do so, I took on this month's DataViz Battle put on by the subreddit r/dataisbeautiful. In DataViz Battle challenges, a dataset is supplied and it is up to the individual to come up with and create interesting and informative data visualizations.
 
-To do so, I took ion this month's DataViz Battle put on by the subreddit r/dataisbeautiful. In DataViz Battle challenges, a dataset is supplied and it is up to the individual to come up with and create interesting and informative data visualizations.
-
-This month, the dataset contained NASA astronaut data, both current and former, along with stats about them for things such as _selection year into the program, time spent in space, and military or civilian background._
-
-This year, NASA will mark the 60th anniversary of its establishment as a U.S. government agency. Let's see what we can uncover about the past 60 years through data visualization!
+This month, the dataset contained NASA astronaut data, both current and former, along with stats about them for things such as _gender, number of flights flown, selection year into the program, time spent in space, and military or civilian background._
 
 ## Data Cleaning
 
@@ -116,6 +113,8 @@ After creating the _Age_ feature, I wanted to see how best to include this into 
 
 From this plot, I found the outlier in the 'Former, Female' grouping of particular interest. WHO IS THE OUTLIER THAT BECAME AN ASTRONAUT AT 47?!
 
+Lets explore the data using _Pandas_ to find out!
+
 ```python
 df_astro['Age'].sort_values(ascending=False).head()
 ```
@@ -151,28 +150,30 @@ Age                                             47
 Name: 298, dtype: object
 ```
 
-- Barbara Morgan was the backup to Christa McAuliffe as part of the Teachers in Space Project back in 1985. McAuliffe was part of the crew for the ill-fated Space Shuttle Challenger mission in 1986.
+Since Barbara Morgan was the oldest to join the astronaut program, I was interested in her journey in getting to that point at that stage of her life. So I read into Barbara's [Wikipedia page](https://en.wikipedia.org/wiki/Barbara_Morgan) and was not disappointed in learning her journey!
+
+- Barbara Morgan was the backup to Christa McAuliffe as part of the Teachers in Space Project back in 1985. McAuliffe was part of the crew for the ill-fated _Space Shuttle Challenger_ mission in 1986.
 
 - Morgan was finally selected in 1998 and flew on the STS-118 Mission.
 
 #### Age By Selection Year
 
-I wanted to see how the age of the selection group has changed over time.
+Additionally, I wanted to see how the age of the selection group has changed over time, if at all.
 
 ![Age Distribution by Year](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_age_year_sns.png)
 
-- The average age of an astronaut across all Selection Groups was 34.5 years old
+- The average age of an astronaut across all Selection Groups was __34.5__ years old
 
-- The distribution of astronauts appears to have gotten older over time with very few candidates being younger than 30.
+- The distribution of astronauts appears to have gotten older over time with very few candidates being younger than _30_.
 
-- We know that Selection Groups before 1978 were mostly smaller than average 16 in each class. This can account for the distributions with less variance.
+- We know that Selection Groups before 1978 were mostly smaller than average __16__ in each class. This can account for the distributions with less variance.
 
 ### Astronaut Selection
 
 {% include nasa_sankey.html %}
 
 - The current pool of astronauts are close to evenly split between military and civilian backgrounds.
-- The military path to NASA is dominated by 188 men, but there are 13 women who have become astronauts from our armed services.
+- The military path to NASA is dominated by __188 men__, but there are __13 women__ who have become astronauts from our armed services.
 
 ```
 [['Collins, Eileen M. ', 1990],
@@ -192,16 +193,22 @@ I wanted to see how the age of the selection group has changed over time.
 
 ### Time in Space
 
+Now for the most interesting category, how long each astronaut has spent in space. Let's see what we can find.
+
 #### Time in Space By Selection Year
 
 ![](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_year_sns.png)
+
+As expected, the early years of the space program had astronauts with relatively shorter times spent in space but this was marked by the Apollo Program and missions to the Moon.
 
 #### Time in Space By Service
 
 ![Age Distribution by Service](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_service_sns.png)
 
 
+#### Comparison of Time in Space for all astronauts
 
+{% include reddit_astro.html %}
 
 
 ## Conclusion
