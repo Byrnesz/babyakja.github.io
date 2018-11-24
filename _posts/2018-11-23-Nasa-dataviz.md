@@ -201,6 +201,8 @@ Now for the most interesting category, how long each astronaut has spent in spac
 
 As expected, the early years of the space program had astronauts with relatively shorter times spent in space but this was marked by the Apollo Program and missions to the Moon.
 
+I was interested in the astronaut from who appears to have been 
+
 #### Time in Space By Service
 
 ![Age Distribution by Service](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_service_sns.png)
