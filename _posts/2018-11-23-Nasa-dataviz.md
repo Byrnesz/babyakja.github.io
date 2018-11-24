@@ -217,7 +217,7 @@ Interestingly, more civilians appear to have spent longer time periods in space 
 
 #### Comparison of Time in Space for all astronauts
 
-{% include reddit_astro.html %}
+{% include custom/reddit_astro.html %}
 
 
 ## Conclusion
