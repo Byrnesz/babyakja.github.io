@@ -6,36 +6,35 @@
 </script>
 <script type="text/javascript">
 (function() {
-            var fn = function() {
-            Bokeh.safely(function() {
-              (function(root) {
-                function embed_document(root) {
+  var fn = function() {
+    Bokeh.safely(function() {
+      (function(root) {
+        function embed_document(root) {
+          var docs_json = document.getElementById('c501cbed-ca2d-40ec-a9f1-c4d2d49043f9').textContent;
+          var render_items = [{"docid":"e061d391-4450-4bb7-9dcb-e2aab567f789","elementid":"154f07e4-75e4-4b48-bf8b-030df5fa1f9c","modelid":"07a79c70-e264-4202-acf8-ace32e02be77"}];
+          root.Bokeh.embed.embed_items(docs_json, render_items);
 
-                  var docs_json = document.getElementById('c501cbed-ca2d-40ec-a9f1-c4d2d49043f9').textContent;
-                  var render_items = [{"docid":"e061d391-4450-4bb7-9dcb-e2aab567f789","elementid":"154f07e4-75e4-4b48-bf8b-030df5fa1f9c","modelid":"07a79c70-e264-4202-acf8-ace32e02be77"}];
-                  root.Bokeh.embed.embed_items(docs_json, render_items);
-
-                  }
-                  if (root.Bokeh !== undefined) {
-                    embed_document(root);
-                  } else {
-                    var attempts = 0;
-                    var timer = setInterval(function(root) {
-                      if (root.Bokeh !== undefined) {
-                        embed_document(root);
-                        clearInterval(timer);
-                      }
-                      attempts++;
-                      if (attempts > 100) {
-                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
-                        clearInterval(timer);
-                      }
-                    }, 10, root)
-                  }
-                })(window);
-              });
-            };
-            if (document.readyState != "loading") fn();
-            else document.addEventListener("DOMContentLoaded", fn);
-          })();
-        </script>
+        }
+        if (root.Bokeh !== undefined) {
+          embed_document(root);
+        } else {
+          var attempts = 0;
+          var timer = setInterval(function(root) {
+            if (root.Bokeh !== undefined) {
+              embed_document(root);
+              clearInterval(timer);
+            }
+            attempts++;
+            if (attempts > 100) {
+              console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
+              clearInterval(timer);
+            }
+          }, 10, root)
+        }
+      })(window);
+    });
+  };
+  if (document.readyState != "loading") fn();
+  else document.addEventListener("DOMContentLoaded", fn);
+})();
+</script>
