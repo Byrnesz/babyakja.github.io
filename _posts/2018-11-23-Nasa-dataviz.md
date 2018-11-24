@@ -220,7 +220,7 @@ Interestingly, more civilians appear to have spent longer time periods in space 
 {% include /custom/reddit_astro.html %}
 
 <div class="bk-root">
-    <div class="bk-plotdiv" id="6e79ab89-3c1e-4f5f-9830-67c6ddb85deb"></div>
+    <div class="bk-plotdiv" id="6bed43cb-dc26-4cb7-a37d-54ad834d339d"></div>
 </div>
 
 
