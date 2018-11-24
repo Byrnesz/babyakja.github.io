@@ -113,7 +113,7 @@ After creating the _Age_ feature, I wanted to see how best to include this into 
 
 From this plot, I found the outlier in the 'Former, Female' grouping of particular interest. WHO IS THE OUTLIER THAT BECAME AN ASTRONAUT AT 47?!
 
-Lets explore the data using _Pandas_ to find out!
+Lets explore the data using __Pandas__ to find out!
 
 ```python
 df_astro['Age'].sort_values(ascending=False).head()
@@ -217,7 +217,7 @@ Interestingly, more civilians appear to have spent longer time periods in space 
 
 #### Comparison of Time in Space for all astronauts
 
-
+{% include reddit_astro.html %}
 
 
 ## Conclusion
