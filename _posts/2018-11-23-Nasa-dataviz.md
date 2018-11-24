@@ -210,8 +210,8 @@ The sunburst chart only contains astronauts that spent time in space.
 {% include /custom/reddit_astro.html %}
 
 <div class="bk-root">
-    <div class="bk-plotdiv" id="460a5f1d-08e1-40f4-9500-9122820ad876"></div>
-</div>
+            <div class="bk-plotdiv" id="70b141bf-907b-4ea4-a02a-f196a3bc6b6d"></div>
+        </div>
 
 ---
 
