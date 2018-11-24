@@ -197,20 +197,27 @@ Now for the most interesting category, how long each astronaut has spent in spac
 
 #### Time in Space By Selection Year
 
-![](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_year_sns.png)
+![Time in Space Box Plots](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_year_sns.png)
 
 As expected, the early years of the space program had astronauts with relatively shorter times spent in space but this was marked by the Apollo Program and missions to the Moon.
 
-I was interested in the astronaut from who appears to have been 
+I was interested in the astronaut from who appears to have been an early pioneer in length of time spent in space from the 1978 Selection Group. Here is what I found:
+
+- Shannon Lucid was part of the first selection group that include females in 1978. On of her many achievements includes her fifth spaceflight in 1996, when she spent __188 days in space__.
+- Shannon Lucid later served as the Chief Scientist of NASA.
 
 #### Time in Space By Service
 
+I was also interested to see if military service members or civilians spent more time in space. My initial assumption is that military background would be more dominate in this area due to prior experience and also being the slight majority in astronaut background.
+
 ![Age Distribution by Service](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_time_service_sns.png)
+
+Interestingly, more civilians appear to have spent longer time periods in space than service members, which I believe can be attributed to the nature of most civilian roles being based on scientific exploration during flight missions.
 
 
 #### Comparison of Time in Space for all astronauts
 
-{% include reddit_astro.html %}
+
 
 
 ## Conclusion
