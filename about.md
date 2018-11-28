@@ -14,12 +14,11 @@ The truth is in the details, let’s work together.
 _Programming_
 - Python
 - Scala
-
-![codewars_python](https://www.codewars.com/users/babyakja/badges/large)
+- R
 
 _Data Science_
 
-- NLP
+- NLP (NLTK, gensim)
 - Machine Learning
 - Data Visualization
 - Hypothesis Testing
@@ -28,6 +27,7 @@ _Data Science_
 - Numpy
 - SQL
 - Keras
+- TensorFlow
 
 
 _Topics_
