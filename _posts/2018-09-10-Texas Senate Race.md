@@ -18,7 +18,9 @@ _Applied Tools:_
 - APIs
 - Natural Language Processing (NLP)
 
-### Data
+<button onclick="window.location.href='/page2'">Continue</button>
+
+### Data 
 
 Data was collected using the Reddit API to access posts from the subreddits for each campaign as well as the Texas subreddit. Since I planned on doing this multiple times and potentially for serveral different subreddits, I decided to write a function that was able to do so for any different subreddit title I decided to use.
 
@@ -122,7 +124,7 @@ __Oversample the data:__ _Randomly sample the minority class to create more 'fak
 
 __Penalized model:__ _Bias the model towards the minority class._  
 
-### Application
+### Application <a href=\"#page2\]><\a>
 
 _Predictions on Texas Subreddit_
 
