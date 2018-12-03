@@ -18,7 +18,7 @@ _Applied Tools:_
 - APIs
 - Natural Language Processing (NLP)
 
-<button onclick="window.location.href='#page2'">Continue2</button>
+<button onclick="window.location.href='#page2'" class="btn btn-primary">Continue2</button>
 <a href="#page2">Continue2</a>
 
 ### Data 
