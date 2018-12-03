@@ -6,12 +6,13 @@ h1{color:#313237;margin-top:0;margin-bottom:.5rem}.dark-bg{background-color:#313
     background-color: white;
     font-size: 16px;
     padding-left: 12px;
+    margin: 2px;
 }
 
 .btn-primary:hover{
     font-weight: bold;
     border-left: 1px solid #333;
-},
+}/*,
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active,
@@ -49,4 +50,4 @@ fieldset[disabled] .btn-primary.active {
 .btn-primary .badge {
     color: #fed136;
     background-color: #fff;
-}
+}*/
