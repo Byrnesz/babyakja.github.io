@@ -19,6 +19,7 @@ _Applied Tools:_
 - Natural Language Processing (NLP)
 
 <button onclick="window.location.href='/page2'">Continue2</button>
+<a href="#page2">Continue2</a>
 
 ### Data 
 
