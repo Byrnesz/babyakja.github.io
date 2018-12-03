@@ -124,7 +124,8 @@ __Oversample the data:__ _Randomly sample the minority class to create more 'fak
 
 __Penalized model:__ _Bias the model towards the minority class._  
 
-### Application <a href=\"#page2\]><\a>
+### Application 
+<h3 id=\"#page2\"><\h3>
 
 _Predictions on Texas Subreddit_
 
