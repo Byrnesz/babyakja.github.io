@@ -18,10 +18,12 @@ _Applied Tools:_
 - APIs
 - Natural Language Processing (NLP)
 
-<button onclick="window.location.href='#page2'" class="btn btn-primary">Continue2</button>
-<a href="#page2">Continue2</a>
+<button onclick="window.location.href='#Data'" class="btn btn-primary">Data</button>
+<button onclick="window.location.href='#Models'" class="btn btn-primary">Models</button>
+<button onclick="window.location.href='#Application'" class="btn btn-primary">Application</button>
+<button onclick="window.location.href='#Conclusion'" class="btn btn-primary">Conclusion</button>
 
-### Data 
+### Data <a name="Data"></a>
 
 Data was collected using the Reddit API to access posts from the subreddits for each campaign as well as the Texas subreddit. Since I planned on doing this multiple times and potentially for serveral different subreddits, I decided to write a function that was able to do so for any different subreddit title I decided to use.
 
@@ -70,7 +72,7 @@ Each of the total posts per campaign were the same in the following chart, but s
 
 ![TimeSeries](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/TimeSeriesChart.png)
 
-### Models
+### Models <a name="Models"></a>
 
 After using TF-IDF to vectorize the text data, I applied multiple classifcation model types into a pipeline and optimized each with GridSearch on my training data to predict which subreddit the post came from. Exploring a variety of models initially helped give direction on which was able to perform relatively effectively and within the scope of the project.
 
@@ -113,7 +115,7 @@ The main reason for this to occur based on these findings was that posts from th
 3. Remove 'Ted' and 'Cruz'
 > 0.910
 
-#### Addressing the Accuracy Paradox
+#### Addressing the Accuracy Paradox 
 
 What this ultimately comes down to is the model demonstrates the need to look at our results from a different perspective based on our data and how the accuracy paradox can come into play. The accuracy paradox states that a model wiht a given level of accuracy may have greater predictive power than models with higher accuracy. So while we are performing at a high accuracy, the best model may not be the one with highest accuracy since what allows us to generate a high score may not be what we really need in the end to find our true positive and negative predictions.
 
@@ -125,7 +127,7 @@ __Oversample the data:__ _Randomly sample the minority class to create more 'fak
 
 __Penalized model:__ _Bias the model towards the minority class._  
 
-### Application <a name="page2"></a>
+### Application <a name="Application"></a>
 
 _Predictions on Texas Subreddit_
 
@@ -137,7 +139,7 @@ Overall, a majority of post were predicted to be discussing topics indicating hi
 
 {% include tx_subreddit.html %}
 
-### Conclusion
+### Conclusion <a name="Conclusion"></a>
 
 Binary predictor can be effective in a first stage classification but can miss subtle things like sarcasm and word proximity. In the case of the subreddit posts from r/texas, posts with the highest probability as pro-Cruz were some of the strongest insults against him. Noticing and taking into account what your data actually contains is imperative to your ability to interpret the results. 
 
