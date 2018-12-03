@@ -18,7 +18,7 @@ _Applied Tools:_
 - APIs
 - Natural Language Processing (NLP)
 
-<button onclick="window.location.href='/page2'">Continue2</button>
+<button onclick="window.location.href='#page2'">Continue2</button>
 <a href="#page2">Continue2</a>
 
 ### Data 
@@ -125,9 +125,7 @@ __Oversample the data:__ _Randomly sample the minority class to create more 'fak
 
 __Penalized model:__ _Bias the model towards the minority class._  
 
-### Application 
-
-<h3 id=\"#page2\"><\h3>
+### Application <a name="page2"></a>
 
 _Predictions on Texas Subreddit_
 
