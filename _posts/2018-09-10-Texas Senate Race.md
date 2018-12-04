@@ -18,10 +18,10 @@ _Applied Tools:_
 - APIs
 - Natural Language Processing (NLP)
 
-<button onclick="window.location.href='#Data'" class="btn btn-primary">Data2</button>
-<button onclick="window.location.href='#Models'" class="btn btn-primary">Models2</button>
-<button onclick="window.location.href='#Application'" class="btn btn-primary">Application2</button>
-<button onclick="window.location.href='#Conclusion'" class="btn btn-primary">Conclusion2</button>
+<button onclick="window.location.href='#Data'" class="btn btn-primary">Data</button>
+<button onclick="window.location.href='#Models'" class="btn btn-primary">Models</button>
+<button onclick="window.location.href='#Application'" class="btn btn-primary">Application</button>
+<button onclick="window.location.href='#Conclusion'" class="btn btn-primary">Conclusion</button>
 
 ### Data <a name="Data"></a>
 
