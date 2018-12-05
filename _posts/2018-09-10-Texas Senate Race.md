@@ -18,10 +18,12 @@ _Applied Tools:_
 - APIs
 - Natural Language Processing (NLP)
 
+<div id=\"case_study_btn_grp\" class=\"flex-container\">
 <button onclick="window.location.href='#Data'" class="btn btn-primary">Data</button>
 <button onclick="window.location.href='#Models'" class="btn btn-primary">Models</button>
 <button onclick="window.location.href='#Application'" class="btn btn-primary">Application</button>
 <button onclick="window.location.href='#Conclusion'" class="btn btn-primary">Conclusion</button>
+</div>    
 
 ### Data <a name="Data"></a>
 
