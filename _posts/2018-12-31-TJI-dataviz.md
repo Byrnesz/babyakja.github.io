@@ -10,4 +10,6 @@ During a Design Jam meetup, we were presented with the task of redesigning the d
 
 I came up with a dashboard to try and achieve these goals.
 
+[justice](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/justice_thumb.jpg)
+
 {% include custom/texas_justice_init.html %}
