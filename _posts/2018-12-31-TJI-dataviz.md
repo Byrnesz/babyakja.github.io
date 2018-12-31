@@ -6,10 +6,10 @@ mathjax: true
 categories: [Visualization]
 ---
 
-During a Design Jam meetup, we were presented with the task of redesigning the data portal for the Texas Justice Initiative website. The intent was to allow the data to be allow more exploration and made user friendly to explore for potential insight.
+During a recent Design Jam meetup, we were presented with the task of redesigning the data portal for the Texas Justice Initiative website. The intent was to have the data presented in a way to encourage more exploration and made user-friendly.
 
 I came up with a dashboard to try and achieve these goals.
 
-[justice](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/justice_thumb.jpg)
+![justice](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/justice_thumb.jpg)
 
 {% include custom/texas_justice_init.html %}
