@@ -16,16 +16,7 @@ _Applied Tools:_
 
 - webscraping
 - APIs
-- Natural Language Processing (NLP)
-
-<div class=\"flex-container\">
-    
-   <button onclick="window.location.href='#Data'" class="btn btn-primary">Data</button>
-   <button onclick="window.location.href='#Models'" class="btn btn-primary">Models</button>
-   <button onclick="window.location.href='#Application'" class="btn btn-primary">Application</button>
-   <button onclick="window.location.href='#Conclusion'" class="btn btn-primary">Conclusion</button>
-    
-</div>    
+- Natural Language Processing (NLP)   
 
 ### Data <a name="Data"></a>
 
