@@ -10,4 +10,11 @@ During a recent Design Jam meetup, we were presented with the task of redesignin
 
 I came up with a dashboard to try and achieve these goals.
 
-{% include custom/texas_justice_init.html %}
+<section class="features">
+
+  <div class="center-module clearfix">
+  {% include custom/texas_justice_init.html %}
+</div>
+</section>
+
+
