@@ -61,7 +61,7 @@ __Problem Statement__
 
 ## Data
 
-_Obtain the Data_
+### Obtain the Data
 
 In order to build out the data to look for changes over time, I collected as much data as I could that would give insight into what Kanye was thinking. This centered on the two areas where he shares his most revealing personal thoughts: _his lyrics and on Twitter.
 
@@ -94,13 +94,13 @@ __B)__ Orion not having the song in their API.
 
 To get around this issue, I ended up scraping the Genius lyric site for any remaining songs I was not able to get from Orion Apiseed.
 
-###       _Discography Summary_
+#### _Discography Summary_
 
->       __12__ Albums
+> __12__ Albums
   
->       __128__ Unique Songs
+> __128__ Unique Songs
 
->       __62,648__ Total Words Used
+> __62,648__ Total Words Used
 
 | __Albums__|__Singles__|
 |:---:|:---:|
@@ -114,7 +114,7 @@ To get around this issue, I ended up scraping the Genius lyric site for any rema
 |  Late Registration||
 |  The College Dropout||
 
-### _Text Cleaning_
+### Text Cleaning
 
 __Note: WORDS USED IN LYRICS WERE NOT FILTERED OR CENSORED, SOME EXPLICIT CONTENT AHEAD__
 
@@ -156,7 +156,7 @@ After the data was processed, it was ready to be used across different types of 
 
 To do this, I attempted two different models to group songs into topics:
 
-### _Topic Modeling_
+### Topic Modeling
 1. __LDA (Latent Dirichlet allocation)__ - Statistics Based
 2. __NMF (Non-negative Matrix Factorization)__ - Linear Algebra
 
@@ -168,7 +168,7 @@ __But how many topics to go with?__ Similar to selecting the number of clusters 
 
 I choose to use a five-topic split since it provided a balance in scoring well for coherence and I could interpret the top words into meaningful groups. Listed below were the topics I settled on:
 
-#### Topics
+#### _Topics_
 
 1. __Public Persona__ - Songs about being in the spotlight and fame
 1. __Speak Ye Truth__ - Kanye singing about what he believes and the truth he wants to speak
@@ -183,7 +183,7 @@ Each song can be labeled as most likely belong to a particular topic. Most notab
 
 Each song is given a probability of belonging to a particular topic. As an additional means of evaluating topic coherence, I reviewed how well the most probabilist song from each topic belonged there. Overall, this returned solid results.
 
-#### Highest Probability Song For Each Topic
+#### _Highest Probability Song For Each Topic_
 
 ```
 0.9954962574881103
@@ -212,7 +212,7 @@ Life
 Make Right/ Legacy
 ```
 
-### __Word Similarity__
+### Word Similarity
 
 Topic grouping was just the beginning of the analysis and I wanted to bring in the ability to group words by similarity. This can be a beneficial tool in understanding how one uses diction and uses word association. Using a modeling method called `Word2Vec`, each word is given a directional vector and words most similar to it will be aligned along the same direction. This is done on a multidimensional plane and difficult to interpret but to help us visualize the model outputs I put them into a t-SNE plot to reorient onto a 2-D space.
 
@@ -255,7 +255,7 @@ Next up was the word _Myself_ since it appeared next to love and was fairly freq
 
 Not something you would like to see associate next to the term _myself_ is anything referencing _killing_. This type of model could potentially reveal someone commonly making references that could lead to harm coming to themselves or others.
 
-### _Sequential Topic Model_
+### Sequential Topic Model
 
 Back to the core of our question regarding behavior changes over time, incorporating changes in topics over time a period seemed the most appropriate for detecting changes.
 
@@ -264,6 +264,8 @@ To process the model, I grouped songs by year of release to create a chronologic
 Visualization was key to understanding the output of the sequential topic model, so using Plotly provided an interactive platform within my Jupyter Notebook to conduct my analysis.
 
 In exploring the model outputs, I picked up on the same word 'myself' being used and contextually what other words were included in that topic over time. The two charts below show the probability of certain words changing overtime along certain themes. Certain words were less used while others became more likely to appear. If words signaling troubling behavior or thoughts can be flagged, then treatment plans can be built around the needs of the patient at that time.
+
+#### _Changes Over Time_
 
 Language usage between 'dead' and 'myself' has changed over time between 2006 to 2016.
 
