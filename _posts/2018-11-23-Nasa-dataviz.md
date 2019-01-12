@@ -6,13 +6,18 @@ mathjax: true
 categories: [EDA,Visualization]
 ---
 
-This year, NASA marked the 60th anniversary of its establishment as a U.S. government agency. Let's see what we can uncover about the past 60 years through data visualization!
+This year, NASA marked the 60th anniversary of its establishment as a U.S. government agency. **Let's see what we can uncover about the past 60 years through data visualization!**
 
-I wanted to try to challenge myself with a quick and exciting data visualization projects. To do so, I took on this month's DataViz Battle put on by the subreddit r/dataisbeautiful. In DataViz Battle challenges, a dataset is supplied, and it is up to the individual to come up with and create interesting and informative data visualizations.
+I wanted to try to challenge myself with a quick and exciting data visualization projects. To do so, I took on this month's DataViz Battle put on by the subreddit *r/dataisbeautiful*. In DataViz Battle challenges, a dataset is supplied, and it is up to the individual to come up with and create interesting and informative data visualizations.
 
-This month, the dataset contained NASA astronaut data, both current and former, along with stats about them for things such as _gender, number of flights flown, selection year into the program, time spent in space, and military or civilian background._
+This month, the dataset contained NASA astronaut data, both current and former, along with stats about them for things such as:
+_- gender
+_- number of flights flown
+_- selection year into the program
+_- time spent in space
+_- military or civilian background
 
-## Data Cleaning
+## Collect Data and Cleaning
 
 I loaded the CSV into a __Jupyter Notebook__, and did an initial inspection of the data types, which returned the following:
 
@@ -40,24 +45,8 @@ Finally, I cleaned up categorial columns I wanted to use by removing extra space
 
 Additionally, I used the year from _Date of birth_ along with _Selection Year_ to make a new data column called _Age_, which refers to the age of the Astronaut at the time of their selection into the program.
 
-## Inspiration
 
-When I think of space and graphs, my first visual is the control panel of the Space Shuttle or any older electronic device. This gave me the idea to use a dark background along with crisp colors that stand out on a black background. Below is an example of the Space Shuttle control panel on display at Space Center Houston.
-
-![Space Shuttle Controls](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_space_shuttle_controls.jpg)
-
-Charts and grids on control panels have similar themes across both real and virtual environments.  The gif below is the gameplay from the video game classic __Wing Commander__. This is what I hoped to mimic when I wanted to make interactive charts!
-
-![Wing Commander](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Wing_Commander_20.gif)
-
-### Charts in Python
-
-My default charting is usually __Seaborn__ when doing quick plots with styling, but I also wanted to try out the new __Chartify__ library released by Spotify to test its functionality.
-
-For interactive charts, I used __Plotly__ as well as __Bokeh__ since it was the library where I could most easily accomplish the sunburst effect I wanted to create.
-
-
-## Explore Data
+## Explore The Data
 
 For me, the best part of data visualization is about what you can uncover from the data by visualizing groups and allowing the scale to tell a story. I wanted not only to create some visually appealing graphs but see what we can learn from the data outside of the table format!
 
@@ -142,7 +131,7 @@ Since Barbara Morgan was the oldest to join the astronaut program, I wanted to k
 
 Additionally, I wanted to see how the age of the selection group has changed over time, if at all. A ridge plot should be a useful tool in doing so.
 
-![Age Distribution by Year](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_age_year_sns.png)
+![Age Distribution by Year](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_age_year_sns.png){: .center-image }
 
 - The __average age__ of an astronaut across all Selection Groups was __34.5__ years old
 
@@ -214,6 +203,22 @@ The sunburst chart only contains astronauts that spent time in space.
         </div>
 
 ---
+
+## Inspiration
+
+When I think of space and graphs, my first visual is the control panel of the Space Shuttle or any older electronic device. This gave me the idea to use a dark background along with crisp colors that stand out on a black background. Below is an example of the Space Shuttle control panel on display at Space Center Houston.
+
+![Space Shuttle Controls](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/nasa_space_shuttle_controls.jpg)
+
+Charts and grids on control panels have similar themes across both real and virtual environments.  The gif below is the gameplay from the video game classic __Wing Commander__. This is what I hoped to mimic when I wanted to make interactive charts!
+
+![Wing Commander](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Wing_Commander_20.gif)
+
+### Charts in Python
+
+My default charting is usually __Seaborn__ when doing quick plots with styling, but I also wanted to try out the new __Chartify__ library released by Spotify to test its functionality.
+
+For interactive charts, I used __Plotly__ as well as __Bokeh__ since it was the library where I could most easily accomplish the sunburst effect I wanted to create.
 
 ## Conclusion
 
