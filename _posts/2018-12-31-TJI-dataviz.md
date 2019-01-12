@@ -6,9 +6,11 @@ mathjax: true
 categories: [Visualization]
 ---
 
-During a recent Design Jam meetup, we were presented with the task of redesigning the data portal for the Texas Justice Initiative website. The intent was to have the data presented in a way to encourage more exploration and made user-friendly.
+During a recent Design Jam meetup, we were presented with the task of redesigning the data portal for the Texas Justice Initiative website. 
 
-I came up with a dashboard to try and achieve these goals.
+The intent was to have the data presented in a way to encourage more exploration and made user-friendly. I took on this goal after the sprint was finished and came up with some visuals to accompany our work. The dashboard below highlights some suggested layout improvements that can be incorporated.
+
+For comparison, the original site can be seen [here.](http://texasjusticeinitiative.org/data/)
 
   {% include custom/texas_justice_init.html %}
 
