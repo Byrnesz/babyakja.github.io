@@ -17,6 +17,7 @@ The dataset used was Kanye West lyrics across his entire discography. I wanted t
 
 __Models__
 
+<<<<<<< HEAD
 _- Topic Modeling_
   - Latent Dirichlet Allocation (LDA)
   - Non-negative Matrix Factorization (NMF)
@@ -31,6 +32,21 @@ To better understand the linguistic contexts of words used in Kanye's lyrics, I 
 _- Sequential Topic Modeling_
 
 Finally, after identifying key words to review, I generated a sequential topic model that grouped songs by year and
+=======
+Models were constructed for three main areas: Word Similarity, Topic Modeling, and Sequential Topic Modeling.
+
+_Word Similarity_ | Word2Vec
+  
+To better understand the linguistic contexts of words used in Kanye's lyrics, I used a Word2Vec model to understand the words most similar to the most common words in certain topics. This help me identify areas to focus on and words most strongly associated with describing common themes.
+
+_Topic Modeling_ | Latent Dirichlet Allocation (LDA) and Non-negative Matrix Factorization (NMF)
+  
+Five topics were able to be generated that classified each of Kanye's song into a different type based on vocabulary. The total number of topics was selected by evaluating the coherence score.
+  
+_Sequential Topic Modeling_
+
+Finally, after identifying key words to review, I generated a sequential topic model that grouped topics across years to determine changes in vocabulary over time.
+>>>>>>> ae35dc0068deda566dd2ac625bd470fcce380ef1
 
 __Takeaway__
 
@@ -62,7 +78,7 @@ __Problem Statement__
 
 ## Data
 
-_Obtain the Data_
+### Obtain the Data
 
 In order to build out the data to look for changes over time, I collected as much data as I could that would give insight into what Kanye was thinking. This centered on the two areas where he shares his most revealing personal thoughts: _his lyrics and on Twitter.
 
@@ -95,10 +111,10 @@ __B)__ Orion not having the song in their API.
 
 To get around this issue, I ended up scraping the Genius lyric site for any remaining songs I was not able to get from Orion Apiseed.
 
-### _Discography Summary_
+#### _Discography Summary_
 
 > __12__ Albums
-
+  
 > __128__ Unique Songs
 
 > __62,648__ Total Words Used
@@ -115,7 +131,7 @@ To get around this issue, I ended up scraping the Genius lyric site for any rema
 |  Late Registration||
 |  The College Dropout||
 
-### _Text Cleaning_
+### Text Cleaning
 
 __Note: WORDS USED IN LYRICS WERE NOT FILTERED OR CENSORED, SOME EXPLICIT CONTENT AHEAD__
 
@@ -157,7 +173,7 @@ After the data was processed, it was ready to be used across different types of 
 
 To do this, I attempted two different models to group songs into topics:
 
-### _Topic Modeling_
+### Topic Modeling
 1. __LDA (Latent Dirichlet allocation)__ - Statistics Based
 2. __NMF (Non-negative Matrix Factorization)__ - Linear Algebra
 
@@ -165,11 +181,11 @@ LDA provided the most interpretable results with the count vectorized lyric data
 
 __But how many topics to go with?__ Similar to selecting the number of clusters to use in k-Means, finding the right balance here requires using several different possible evaluation methods. I chose to use a metric called __Coherence Score__ to help in this process. The coherence score can be calculated across different topic numbers and compare to see which provide the right fidelity to the level you are looking for. My intention was to allocate songs into as many topics as possible that were descriptive but so much that isolated one song per topic. On the flip side, selecting too few topics lumps almost all songs into general groups where uniqueness cannot be easily defined.
 
-![Coherence](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Coherence Score.png)
+![Coherence](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Coherence Score.png){: .center-image }
 
 I choose to use a five-topic split since it provided a balance in scoring well for coherence and I could interpret the top words into meaningful groups. Listed below were the topics I settled on:
 
-### _Topics_
+#### _Topics_
 
 1. __Public Persona__ - Songs about being in the spotlight and fame
 1. __Speak Ye Truth__ - Kanye singing about what he believes and the truth he wants to speak
@@ -181,9 +197,10 @@ Each song can be labeled as most likely belong to a particular topic. Most notab
 
 {% include Kanye_tab_leau.html %}
 
+
 Each song is given a probability of belonging to a particular topic. As an additional means of evaluating topic coherence, I reviewed how well the most probabilist song from each topic belonged there. Overall, this returned solid results.
 
-#### Highest Probability Song | _Each Topic_
+#### _Highest Probability Song For Each Topic_
 
 ```
 0.9954962574881103
@@ -212,7 +229,7 @@ Life
 Make Right/ Legacy
 ```
 
-### __Word Similarity__
+### Word Similarity
 
 Topic grouping was just the beginning of the analysis and I wanted to bring in the ability to group words by similarity. This can be a beneficial tool in understanding how one uses diction and uses word association. Using a modeling method called `Word2Vec`, each word is given a directional vector and words most similar to it will be aligned along the same direction. This is done on a multidimensional plane and difficult to interpret but to help us visualize the model outputs I put them into a t-SNE plot to reorient onto a 2-D space.
 
@@ -220,7 +237,7 @@ Topic grouping was just the beginning of the analysis and I wanted to bring in t
 
 After the model was compiled, I wanted to isolate particular words that appeared frequently and understand what other similar words he associated with it. I started with _Love_:
 
-### _Most Similar to: Love_
+#### _Most Similar to: Love_
 
 ```
 [('fadin', 0.5092264413833618),
@@ -238,7 +255,7 @@ A mix of positive and negative terms here is not surprising considering how comp
 
 Next up was the word _Myself_ since it appeared next to love and was fairly frequent:
 
-### _Most Similar to: Myself_
+#### _Most Similar to: Myself_
 
 ```
 [('bed', 0.5850050449371338),
@@ -255,13 +272,19 @@ Next up was the word _Myself_ since it appeared next to love and was fairly freq
 
 Not something you would like to see associate next to the term _myself_ is anything referencing _killing_. This type of model could potentially reveal someone commonly making references that could lead to harm coming to themselves or others.
 
-### _Sequential Topic Model_
+### Sequential Topic Model
 
-Back to the core of our question regarding behavior changes over time, incorporating changes in topics over time a period seemed the most appropriate for detecting changes. To process the model, I grouped songs by year of release to create a chronological evaluation group. Then, I tuned parameters in order to create the proper amount of sensitivity in vocabulary changes across topics that could be detected. This was done by adjusting a parameter called _chain variance_.
+Back to the core of our question regarding behavior changes over time, incorporating changes in topics over time a period seemed the most appropriate for detecting changes.
+
+To process the model, I grouped songs by year of release to create a chronological evaluation group. Then, I tuned parameters in order to create the proper amount of sensitivity in vocabulary changes across topics that could be detected. This was done by adjusting a parameter called _chain variance_.
 
 Visualization was key to understanding the output of the sequential topic model, so using Plotly provided an interactive platform within my Jupyter Notebook to conduct my analysis.
 
 In exploring the model outputs, I picked up on the same word 'myself' being used and contextually what other words were included in that topic over time. The two charts below show the probability of certain words changing overtime along certain themes. Certain words were less used while others became more likely to appear. If words signaling troubling behavior or thoughts can be flagged, then treatment plans can be built around the needs of the patient at that time.
+
+#### _Changes Over Time_
+
+Language usage between 'dead' and 'myself' has changed over time between 2006 to 2016.
 
 ![Topic 2006](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/overtime2006.png)
 
@@ -293,7 +316,8 @@ Using and collecting text data:
 
 Building NLP models:
 
-> __Topic Modeling can assist in finding overarching groups, flexible based on need (static vs dynamic)__
+> __Topic Modeling can assist in finding overarching groups, flexible based on need 
+  (static vs dynamic)__
 
 > __Word2Vec creates reliable word association grouping and can be useful on larger corpus in NLP__
 
