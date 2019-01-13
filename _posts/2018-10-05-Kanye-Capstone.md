@@ -17,22 +17,6 @@ The dataset used was Kanye West lyrics across his entire discography. I wanted t
 
 __Models__
 
-<<<<<<< HEAD
-_- Topic Modeling_
-  - Latent Dirichlet Allocation (LDA)
-  - Non-negative Matrix Factorization (NMF)
-
-Five topics were able to be generated that classified each of Kanye's song into a different type based on vocabulary. The total number of topics was selected by evaluating the coherence score.
-
-_- Word Similarity_
-  - Word2Vec
-
-To better understand the linguistic contexts of words used in Kanye's lyrics, I used a Word2Vec model to understand the words most similar to the most common words in certain topics. This help me identify areas to focus on and words most strongly associated with describing common themes.
-
-_- Sequential Topic Modeling_
-
-Finally, after identifying key words to review, I generated a sequential topic model that grouped songs by year and
-=======
 Models were constructed for three main areas: Word Similarity, Topic Modeling, and Sequential Topic Modeling.
 
 _Word Similarity_ | Word2Vec
@@ -46,7 +30,6 @@ Five topics were able to be generated that classified each of Kanye's song into 
 _Sequential Topic Modeling_
 
 Finally, after identifying key words to review, I generated a sequential topic model that grouped topics across years to determine changes in vocabulary over time.
->>>>>>> ae35dc0068deda566dd2ac625bd470fcce380ef1
 
 __Takeaway__
 
