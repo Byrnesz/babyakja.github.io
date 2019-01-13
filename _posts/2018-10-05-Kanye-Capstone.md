@@ -9,7 +9,7 @@ categories: [Project, NLP]
 
 ## Summary
 
-My capstone project was centered around exploring Natural Language Processing tools and how to apply that in the realm of mental health and detecting bipolar tendencies. The project methodology centered on taking a dataset with potential signs of bipolar disorder in the language used and applying machine learning algorithims to identify patterns. 
+My capstone project was centered around exploring Natural Language Processing tools and how to apply that in the realm of mental health and detecting bipolar tendencies. The project methodology centered on taking a dataset with potential signs of bipolar disorder in the language used and applying machine learning algorithms to identify patterns.
 
 __Data__
 
@@ -20,21 +20,21 @@ __Models__
 _- Topic Modeling_
   - Latent Dirichlet Allocation (LDA)
   - Non-negative Matrix Factorization (NMF)
-  
+
 Five topics were able to be generated that classified each of Kanye's song into a different type based on vocabulary. The total number of topics was selected by evaluating the coherence score.
-  
+
 _- Word Similarity_
   - Word2Vec
-  
+
 To better understand the linguistic contexts of words used in Kanye's lyrics, I used a Word2Vec model to understand the words most similar to the most common words in certain topics. This help me identify areas to focus on and words most strongly associated with describing common themes.
-  
+
 _- Sequential Topic Modeling_
 
-Finally, after identifying key words to review, I generated a sequential topic model that grouped songs by year and 
+Finally, after identifying key words to review, I generated a sequential topic model that grouped songs by year and
 
 __Takeaway__
 
-Unsupervised learning can provide useful tools in creating labels and generating additional features that may not be apparent at first. Uncovering trends and tendencies by using machine learning algorithms 
+Unsupervised learning can provide useful tools in creating labels and generating additional features that may not be apparent at first. Uncovering trends and tendencies by using machine learning algorithms
 
 
 ---
