@@ -19,11 +19,11 @@ __Models__
 
 Models were constructed for three main areas: Word Similarity, Topic Modeling, and Sequential Topic Modeling.
 
-_Word Similarity_ | Word2Vec
+_Word Similarity_ - Word2Vec
   
 To better understand the linguistic contexts of words used in Kanye's lyrics, I used a Word2Vec model to understand the words most similar to the most common words in certain topics. This help me identify areas to focus on and words most strongly associated with describing common themes.
 
-_Topic Modeling_ | Latent Dirichlet Allocation (LDA) and Non-negative Matrix Factorization (NMF)
+_Topic Modeling_ - Latent Dirichlet Allocation (LDA) and Non-negative Matrix Factorization (NMF)
   
 Five topics were able to be generated that classified each of Kanye's song into a different type based on vocabulary. The total number of topics was selected by evaluating the coherence score.
   
