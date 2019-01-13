@@ -6,7 +6,8 @@ mathjax: true
 categories: [EDA,Visualization]
 ---
 
-This year, NASA marked the 60th anniversary of its establishment as a U.S. government agency. **Let's see what we can uncover about the past 60 years through data visualization!**
+This year, NASA marked the 60th anniversary of its establishment as a U.S. government agency. 
+**Let's see what we can uncover about the past 60 years through data visualization!**
 
 I wanted to try to challenge myself with a quick and exciting data visualization projects. To do so, I took on this month's DataViz Battle put on by the subreddit *r/dataisbeautiful*. In DataViz Battle challenges, a dataset is supplied, and it is up to the individual to come up with and create interesting and informative data visualizations.
 
