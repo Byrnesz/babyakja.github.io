@@ -97,18 +97,19 @@ During review of the coefficients, it was clear that the names of each candidate
 ![Beto](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Beto-coeff.png)
 ![Cruz Coefficients](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Crus-coeff.png)
 
-__Changes affect Accuracy__
+__Changes to Model Accuracy__
 
-To further explore how each candidate name effected the accuracy of the overall model, I experimented with adding them to the list of stop words that the vectorizer ignored. I was able to produce almost the same accuracy by removing Ted Cruz from the corpus as I was able to do fine tuning more complex models like Support Vector Machines and GradientBoost.
+To further explore how each candidate name affected the accuracy of the overall model, I experimented with adding them to the list of stop words that the vectorizer ignored. I was able to produce almost the same accuracy by removing Ted Cruz from the corpus as I was able to do fine tuning the hyperparameters for models such as Support Vector Machines and GradientBoost.
+
+
+__1. Remove Candidates Names__
+> 0.729
+__2. Remove 'Beto' and 'Rourke'__
+> 0.835
+__3. Remove 'Ted' and 'Cruz'__
+> 0.910
 
 The main reason for this to occur based on these findings was that posts from the Beto subreddit included more references to Ted Cruz and once removed, was able to seperate Beto posts just as effectively. 
-
-1. Remove Candidates Names
-> 0.729
-2. Remove 'Beto' and 'Rourke'
-> 0.835
-3. Remove 'Ted' and 'Cruz'
-> 0.910
 
 #### Addressing the Accuracy Paradox 
 
@@ -128,9 +129,10 @@ _Predictions on Texas Subreddit_
 
 I wanted to understand the state of a third subreddit using what was trained to the model and if I could get the pulse of the Texas reddit. I used the same function I built earlier and isolated any post referencing a candidate or had a 'politics' flag.
 
-Overall, a majority of post were predicted to be discussing topics indicating higher discussion relating to Beto over Cruz. The breakdown in post were:
-### Beto: __69%__
-### Cruz: __31%__
+Overall, a majority of post were predicted to be discussing topics indicating higher discussion relating to Beto over Cruz. 
+
+The breakdown in post were:
+### Beto: _69%_ | Cruz: _31%_
 
 {% include tx_subreddit.html %}
 
