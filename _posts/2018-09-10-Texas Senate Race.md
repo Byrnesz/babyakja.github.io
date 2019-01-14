@@ -103,10 +103,15 @@ To further explore how each candidate name affected the accuracy of the overall 
 
 
 __1. Remove Candidates Names__
+
 > 0.729
+
 __2. Remove 'Beto' and 'Rourke'__
+
 > 0.835
+
 __3. Remove 'Ted' and 'Cruz'__
+
 > 0.910
 
 The main reason for this to occur based on these findings was that posts from the Beto subreddit included more references to Ted Cruz and once removed, was able to seperate Beto posts just as effectively. 
@@ -131,8 +136,7 @@ I wanted to understand the state of a third subreddit using what was trained to 
 
 Overall, a majority of post were predicted to be discussing topics indicating higher discussion relating to Beto over Cruz. 
 
-The breakdown in post were:
-### Beto: _69%_ | Cruz: _31%_
+The breakdown in post were:  __Beto: _69%_ | Cruz: _31%___
 
 {% include tx_subreddit.html %}
 
