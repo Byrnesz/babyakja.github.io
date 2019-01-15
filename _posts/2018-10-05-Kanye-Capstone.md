@@ -6,10 +6,11 @@ mathjax: true
 categories: [Project, NLP]
 ---
 
+What can we uncover by taking a dataset with potential signs of bipolar disorder and apply machine learning algorithms to identify patterns in the language. Could we detect behaviorial changes or shifts in mood?
 
 ## Summary
 
-My capstone project was centered around exploring Natural Language Processing tools and how to apply that in the realm of mental health and detecting bipolar tendencies. The project methodology centered on taking a dataset with potential signs of bipolar disorder in the language used and applying machine learning algorithms to identify patterns.
+My capstone project was centered around exploring Natural Language Processing tools and how to apply that in the realm of mental health and detecting bipolar tendencies.
 
 __Data__
 
