@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Predicting Home Prices in Ames, Iowa
+title: Experimenting with Machine Learning using the Ames, IA Housing Dataset
 featured-img : ames-iowa
 categories: [Project, EDA]
 ---
 
-Ah yes, the Ames, Iowa dataset. At least it is not the iris dataset, amarite?
+The Ames Iowa Housing dataset is well known teaching dataset from Kaggle and provides a solid dataset to test new practices and expand knowledge. In this post, I will outline some of the latest methods I have been trying to learn more about them and understand best use cases.
 
-This was an interesting dataset because of the possibilities associated with the EDA to clean and prep the data and understand how this can impact your final results.
+### Missing Data and Imputing Values
 
-### Exploratory Data Analysis
-
-### Imputing Values
-
-### Outliers
+- Different methods
 
 ### Feature Engineering
+
+### Testing New Models or Python Libraries
+
+- TPOT
 
