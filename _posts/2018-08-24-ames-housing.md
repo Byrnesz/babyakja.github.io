@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Experimenting with Machine Learning using the Ames, IA Housing Dataset
+title: Testing Machine Learning Tools with Ames Housing Data
 featured-img : ames-iowa
 categories: [Project, EDA]
 ---
