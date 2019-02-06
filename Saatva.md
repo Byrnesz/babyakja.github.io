@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Saatva
+title: Saatva Mattress
 permalink: /saatva_dashboard/
 ---
 
