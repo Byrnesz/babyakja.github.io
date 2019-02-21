@@ -1,6 +1,6 @@
 ---
 layout: page
-title: TJI | BAIL REFORM 
+title: Custodial Deaths in Texas Jails
 permalink: /bail_dashboard/
 ---
 
