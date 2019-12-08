@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Viz - Texas Justice Initiative
-featured-img: justice
+featured-img: post_tji_redesign
 mathjax: true
 categories: [Visualization]
 ---
