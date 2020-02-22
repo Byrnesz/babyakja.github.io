@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Viz - A Journey Through Time and Space!
-featured-img: nasa_age_year_sns
+featured-img: nasa
 mathjax: true
 categories: [EDA,Visualization]
 ---
