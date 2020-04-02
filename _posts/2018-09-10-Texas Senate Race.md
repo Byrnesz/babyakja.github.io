@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "NLP on the 2018 Texas Senate Race"
-featured-img: cruz-beto
+featured-img: beto
 categories: [Project, NLP]
 ---
 
