@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Viz - Path to Fully Vaccinated
-featured-img: vaccine_schedule
+featured-img: vaccine-schedule
 mathjax: true
 categories: [Visualization]
 ---
